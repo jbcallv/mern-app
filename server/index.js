@@ -1,10 +1,12 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import UserModel from './models/Users.js'
+import cors from 'cors';
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(
     "mongodb+srv://admin:cL8ks680JCzA1phM@cluster0.fcj31.mongodb.net/merndb?retryWrites=true&w=majority"
